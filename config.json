@@ -1,0 +1,5 @@
+{
+  "port": 3380,
+  "mongo_host": "x41409y452.qicp.vip:30096",
+  "mongo_db": "bossJobs"
+}

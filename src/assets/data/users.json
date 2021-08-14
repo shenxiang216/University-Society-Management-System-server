@@ -1,0 +1,26 @@
+[
+  {
+    "role": "1",
+    "username": "Worker",
+    "password": "7c4a8d09ca3762af61e59520943dc26494f8941b",
+    "nickname": "求职者",
+    "sex": "Woman",
+    "photo": "https://img.bosszhipin.com/boss/avatar/avatar_7.png?x-oss-process=image/resize,w_100,limit_0",
+    "position": "求职者",
+    "interested": "",
+    "state": "1",
+    "myCompanys": ""
+  },
+  {
+    "role": "2",
+    "username": "SuperAdmin",
+    "password": "7c4a8d09ca3762af61e59520943dc26494f8941b",
+    "nickname": "系统管理员",
+    "sex": "man",
+    "photo": "https://img.bosszhipin.com/boss/avatar/avatar_7.png?x-oss-process=image/resize,w_100,limit_0",
+    "position": "最高管理员",
+    "interested": "",
+    "state": "1",
+    "myCompanys": ""
+  }
+]

@@ -55,10 +55,17 @@ export async function adminLogin(username: string, password: string) {
       state: Status.Normal,
       myCompany: null
     }
-    const register = await db.usersCollection.insertOne(user)
-    // adminLogin(username, password)
+    const res = await db.usersCollection.insertOne(user)
+    const newToken = crypto.randomBytes(12).toString('hex')
+    await db.tokensCollection.insertOne({
+      userId: new ObjectId(res.insertedId),
+      userToken: newToken
+    })
     return {
-      message: 'Not found user,but register success'
+      // 登陆成功返回值
+      newToken, // 返回的token 给router设置cookie中的token
+      user: result,
+      message: 'login success'
     }
   }
 }
@@ -104,9 +111,7 @@ export async function updUserinfo(record: IUser, token: string) {
       { _id: user._id },
       {
         $set: {
-          photo: record.photo,
           nickname: record.nickname,
-          sex: record.sex,
           position: record.position
         }
       }

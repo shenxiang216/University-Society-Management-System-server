@@ -57,7 +57,7 @@ router.post('/settings', async ctx => {
     stat: 'OK'
   }
 })
-// 4、用户修改密码 tsk
+// 4、用户修改密码
 router.post('/settings/password', async ctx => {
   const token = ctx.cookies.get('token')
   const schema = Joi.object({
@@ -72,7 +72,7 @@ router.post('/settings/password', async ctx => {
   }
 })
 
-// 5、退出登陆 tsk
+// 5、退出登陆
 router.post('/exit', async ctx => {
   const token = ctx.cookies.get('token')
   ctx.set('Set-Cookie', 'token= ; path=/; httpOnly')

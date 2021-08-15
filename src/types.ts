@@ -19,11 +19,11 @@ export enum UserRole {
    */
   SuperAdmin = 2,
   /**
-   * 企业创建者
+   * 社团创建者
    */
   Boss = 3,
   /**
-   * 企业管理员
+   * 社团管理员
    */
   Admin = 4
 }
@@ -111,7 +111,7 @@ export interface IUser {
    */
   photo: string
   /**
-   * 个人职位
+   * 个人活动
    */
   position: string
   /**
@@ -123,7 +123,7 @@ export interface IUser {
    */
   state: Status
   /**
-   * 所属公司
+   * 所属社团
    */
   myCompany: ObjectId
 }
@@ -158,23 +158,23 @@ export enum size {
 export interface ICompany {
   _id?: ObjectId
   /**
-   * 公司名
+   * 社团名
    */
   companyName: string
   /**
-   * 公司logo
+   * 社团logo
    */
   companyLogo: string
   /**
-   * 公司描述
+   * 社团描述
    */
   companyIntroduce: string
   /**
-   * 公司地址
+   * 社团地址
    */
   companyAddress: string
   /**
-   * 公司规模
+   * 社团规模
    */
   companySize: number
   /**
@@ -190,7 +190,7 @@ export interface ICompany {
    */
   refreshTime: string
   /**
-   * 公司状态
+   * 社团状态
    */
   state: Status
   /**
@@ -248,11 +248,11 @@ export enum exp {
 export interface IJobs {
   _id?: string
   /**
-   * 职位名称
+   * 活动名称
    */
   title: string
   /**
-   * 职位所在城市
+   * 活动所在城市
    */
   city: string
   /**
@@ -264,7 +264,7 @@ export interface IJobs {
    */
   degree: number
   /**
-   * 职位标题
+   * 活动标题
    */
   label: string[]
   /**
@@ -284,7 +284,7 @@ export interface IJobs {
    */
   issuer?: string
   /**
-   * 职位描述
+   * 活动描述
    */
   decription: string
   /**
@@ -296,27 +296,27 @@ export interface IJobs {
    */
   addresscode?: IMapCenter
   /**
-   * 发布公司Objectid
+   * 发布社团Objectid
    */
   ownedCompany?: string
   /**
-   * 职位状态
+   * 活动状态
    */
   state?: Status
   /**
-   * 职位发布人头像
+   * 活动发布人头像
    */
   HRavator?: string
   /**
-   * 职位发布人名字
+   * 活动发布人名字
    */
   HRname?: string
   /**
-   * 发布人的职位
+   * 发布人职位
    */
   HRposition?: string
   /**
-   * 职位所属公司
+   * 活动所属社团
    */
   company?: string
 }
@@ -324,26 +324,26 @@ export interface IJobs {
 export interface IHotJobs {
   _id?: ObjectId
   /**
-   * 职位名称
+   * 活动名称
    */
   jobName: string
 }
 
 export interface IHotCompanies {
   /**
-   * 企业id
+   * 社团id
    */
   companyId: ObjectId
   /**
-   * 企业名称
+   * 社团名称
    */
   companyName: string
   /**
-   * 企业logo
+   * 社团logo
    */
   companyLogo: string
   /**
-   * 企业热招职位数量
+   * 社团热招活动数量
    */
   jobsCount: number
 }
